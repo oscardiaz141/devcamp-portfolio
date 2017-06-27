@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :portfolios, execpt: [:show]
+  get 'angular-items', to: 'portoflios#angular'
   get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
   
   get 'about', to:'pages#about'
